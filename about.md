@@ -1,11 +1,15 @@
 ---
 layout: page
-title: About
+title: О нас
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](http://jekyllrb.com/)
+Мы небольшая команда студентов, делающая разные интересные штуковины.
 
-You can find the source code for the Jekyll new theme at: [github.com/jglovier/jekyll-new](https://github.com/jglovier/jekyll-new)
+Нас интересуют в основном:
 
-You can find the source code for Jekyll at [github.com/jekyll/jekyll](https://github.com/jekyll/jekyll)
+* Спутники
+* Роботы
+* Программное обеспечение
+
+Все наши проекты открыты и расположены на гитхабе.

@@ -1,0 +1,17 @@
+.logo-wrapper
+  position: relative
+  $width: 200px
+  $offset: 20px
+  .logo
+    position: absolute
+    top: $offset
+    left: -($width+$offset)
+    background: lighten($background-color, 5%)
+    img
+      width: $width
+      position: relative
+      border:
+        style: solid
+        color: lightgray
+        width: thin
+        radius: 10px
