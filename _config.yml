@@ -13,3 +13,5 @@ redcarpet:
 
 sass:
     sass_dir: _sass
+
+gems: ["emoji_for_jekyll"]
