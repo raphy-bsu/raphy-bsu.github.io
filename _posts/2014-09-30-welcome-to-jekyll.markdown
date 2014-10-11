@@ -2,6 +2,7 @@
 layout: post
 title:  "Всем привет!"
 date:   2014-09-30 15:18:50
+author: OrelSokolov
 categories: новости
 ---
 
