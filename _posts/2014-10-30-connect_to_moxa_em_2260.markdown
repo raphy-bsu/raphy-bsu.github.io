@@ -22,9 +22,9 @@ categories: moxa
 * Выполните в терминале:
 
 ```bash
-ifconfig eth0  192.168.3.126
+sudo ifconfig eth0  192.168.3.126
 # или
-ifconfig eth0  192.168.4.126
+sudo ifconfig eth0  192.168.4.126
 # В зависимости от того, к какому порту подключаетесь
 ```
 
