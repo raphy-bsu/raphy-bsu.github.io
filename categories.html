@@ -6,7 +6,7 @@ permalink: /categories/
 
 
 {% for category in site.categories %}
-  <h2>{{ category | first }}</h2>
+  <h2>{{ category | first | category_name }}</h2>
     <ul>
     {% for posts in category %}
       {% for post in posts %}
