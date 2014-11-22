@@ -1,12 +1,13 @@
 require 'redis'
+require 'open-uri'
+require 'nokogiri'
 
 module Jekyll
   module GithubAvatar
     def avatar(username)
       def full_name username
-        require 'json'
-        require 'net/http'
-        JSON.parse(Net::HTTP.get URI("https://api.github.com/users/#{username}"))["name"]
+        page = Nokogiri::HTML(open("https://github.com/#{username}"))
+        page.css('.vcard-fullname').first.text
       end
 
       def html username, full_name
@@ -16,7 +17,10 @@ module Jekyll
       end
 
       redis = Redis.new
-      f_name = redis.exists(username) ? redis.get(username) : full_name(username)
+      key = "raphy-bsu-site-#{username}"
+      f_name = redis.exists(key) && !redis.get(key).empty? ? redis.get(key) : full_name(username)
+      puts "Full name for: #{username} is #{f_name}"
+      redis.set key, f_name
       html username, f_name
     end
   end

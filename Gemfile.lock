@@ -143,5 +143,6 @@ DEPENDENCIES
   github-pages (= 28)
   jekyll-assets
   json
+  nokogiri
   redcarpet
   redis

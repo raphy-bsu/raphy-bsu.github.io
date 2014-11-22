@@ -10,3 +10,4 @@ gem 'albino'
 gem 'emoji_for_jekyll'
 gem "jekyll-assets"
 gem 'redis'
+gem 'nokogiri'
