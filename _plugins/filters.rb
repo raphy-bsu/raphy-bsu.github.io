@@ -16,7 +16,7 @@ module Jekyll
       end
 
       redis = Redis.new
-      f_name = redis.exists username ? redis.get username : full_name username
+      f_name = redis.exists(username) ? redis.get(username) : full_name(username)
       html username, f_name
     end
   end
