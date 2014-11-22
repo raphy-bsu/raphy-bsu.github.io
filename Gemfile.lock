@@ -111,6 +111,7 @@ GEM
       ffi (>= 0.5.0)
     rdiscount (2.1.7)
     redcarpet (3.1.2)
+    redis (3.1.0)
     safe_yaml (1.0.4)
     sass (3.4.5)
     sprockets (2.12.3)
@@ -143,3 +144,4 @@ DEPENDENCIES
   jekyll-assets
   json
   redcarpet
+  redis
