@@ -4,10 +4,10 @@ layout: default
 <div class="post">
 
   <header class="post-header">
+    {%if page.author %}
+      <span class="author-avatar no-print">{{page.author | avatar }}</span>
+    {% endif %}
     <h1 class="post-title">{{ page.title }}
-      {%if page.author %}
-        <span class="author-avatar no-print">{{page.author | avatar }}</span>
-      {% endif %}
     </h1>
     <p class="post-meta no-print">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
   </header>
