@@ -1,0 +1,12 @@
+---
+layout: post
+title: HC-SR04
+date: 2014-11-23 13:59:30
+author: OrelSokolov
+categories: sensors
+permalink: /hc-sr04/
+---
+
+Ультразвуковой датчик
+
+{% image sensors/hc-sr04.png %}
