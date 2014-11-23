@@ -7,6 +7,16 @@ categories: robots
 permalink: /robot-chassis-with-adafruit-driver/
 ---
 
+Данный стенд сделан для быстрого понимания того как можно управлять
+моторами с помощью драйвера Adafruit.
+
+Стенд включает в себя:
+
+* Arduino Uno
+* Adafruit Driver
+* 2 мотора с проводами
+* USB кабель
+
 {% image robots/robot-motor-stand-1.jpg %}
 {% image robots/robot-motor-stand-2.jpg %}
 
