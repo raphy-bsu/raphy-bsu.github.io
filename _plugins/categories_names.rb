@@ -1,10 +1,10 @@
 require 'yaml'
+require_relative 'cache'
 
 module Jekyll
   module CategoriesNames
     def category_name(name)
-      config = YAML.load_file  File.expand_path(File.join(__FILE__, "../../", "categories.yml"))
-      puts config.inspect
+      config = lazy('categories'){ YAML.load_file  File.expand_path(File.join(__FILE__, "../../", "categories.yml")) }
       config[name] || name
     end
   end
