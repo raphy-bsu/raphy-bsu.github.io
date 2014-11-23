@@ -9,4 +9,4 @@ permalink: /hc-sr04/
 
 Ультразвуковой датчик
 
-{% image sensors/hc-sr04.png %}
+{% image sensors/hc-sr04-mini.png %}
