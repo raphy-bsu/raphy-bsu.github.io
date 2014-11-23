@@ -25,8 +25,8 @@ permalink: /robot-chassis-with-adafruit-driver/
 ```cpp
 #include <AFMotor.h>
 
-AF_DCMotor motorL(2);
-AF_DCMotor motorR(3);
+AF_DCMotor motorL(1);
+AF_DCMotor motorR(4);
 
 void setup() {
 }
