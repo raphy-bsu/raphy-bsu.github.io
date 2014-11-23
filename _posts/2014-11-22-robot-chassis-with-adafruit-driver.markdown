@@ -7,6 +7,11 @@ categories: robots
 permalink: /robot-chassis-with-adafruit-driver/
 ---
 
+{% image robots/robot-motor-stand-1.jpg %}
+{% image robots/robot-motor-stand-2.jpg %}
+
+Тут используется [Adafruit Motor Driver](/adafruit-motor-shield/)
+
 ```cpp
 #include <AFMotor.h>
 
