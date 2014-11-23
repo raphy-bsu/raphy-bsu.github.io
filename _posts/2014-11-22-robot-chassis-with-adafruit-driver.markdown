@@ -7,6 +7,7 @@ categories: robots
 permalink: /robot-chassis-with-adafruit-driver/
 ---
 
+{% image 'dk-electronics-driver-mini.png' %}
 
 ```cpp
 #include <AFMotor.h>
