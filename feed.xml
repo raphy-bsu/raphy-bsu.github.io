@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raphy BSU Blog</title>
+    <description>Кучка изобреталелей из восточной Европы
+</description>
+    <link>https://raphy-bsu.github.io/</link>
+    <atom:link href="https://raphy-bsu.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 29 Nov 2014 17:43:20 +0300</pubDate>
+    <lastBuildDate>Sat, 29 Nov 2014 17:43:20 +0300</lastBuildDate>
+    <generator>Jekyll v2.4.0</generator>
+    
+      <item>
+        <title>Adafruit Motor Shield (DK Electronics)</title>
+        <description>&lt;p&gt;&lt;img src=&quot;/assets/dk-electronics-driver-mini-47925acbe6fb6861ea2c693318715378.png&quot;&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;Дополнительные-файлы&quot;&gt;Дополнительные файлы&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&quot;/assets/robots/Multi-MotorShieldSchematic-686b259cd72cde2c347de92b80a419c4.jpg&quot;&gt;Schematic&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 23 Nov 2014 19:14:21 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/adafruit-motor-shield/</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/adafruit-motor-shield/</guid>
+        
+        
+        <category>hw-drivers</category>
+        
+      </item>
+    
+      <item>
+        <title>HC-SR04</title>
+        <description>&lt;p&gt;Ультразвуковой датчик&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/sensors/hc-sr04-mini-2346e0459452150a32970f24336774eb.png&quot;&gt;&lt;/p&gt;
+</description>
+        <pubDate>Sun, 23 Nov 2014 16:59:30 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/hc-sr04/</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/hc-sr04/</guid>
+        
+        
+        <category>sensors</category>
+        
+      </item>
+    
+      <item>
+        <title>Ходовая часть робота (Adafruit Driver)</title>
+        <description>&lt;p&gt;Данный стенд сделан для быстрого понимания того как можно управлять
+моторами с помощью драйвера Adafruit.&lt;/p&gt;
+
+&lt;p&gt;Стенд включает в себя:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Arduino Uno&lt;/li&gt;
+&lt;li&gt;Adafruit Driver&lt;/li&gt;
+&lt;li&gt;2 мотора с проводами&lt;/li&gt;
+&lt;li&gt;USB кабель&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/robots/robot-motor-stand-1-dbbbcf0d5ad92c11189ff48c3846def1.jpg&quot;&gt;
+&lt;img src=&quot;/assets/robots/robot-motor-stand-2-9f949011450d74b6373b2dfb8ba66368.jpg&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Тут используется &lt;a href=&quot;/adafruit-motor-shield/&quot;&gt;Adafruit Motor Driver&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-cpp&quot; data-lang=&quot;cpp&quot;&gt;&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;AFMotor.h&amp;gt;&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;AF_DCMotor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;motorL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;AF_DCMotor&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;motorR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;loop&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;motorL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FORWARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;motorL&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+  &lt;span class=&quot;n&quot;&gt;motorR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;run&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;FORWARD&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;motorR&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;setSpeed&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;240&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Sat, 22 Nov 2014 13:12:12 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/robot-chassis-with-adafruit-driver/</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/robot-chassis-with-adafruit-driver/</guid>
+        
+        
+        <category>robots</category>
+        
+      </item>
+    
+      <item>
+        <title>Требования к системам, которые вы настраиваете</title>
+        <description>&lt;h1 id=&quot;Пароли-и-логины&quot;&gt;Пароли и логины&lt;/h1&gt;
+
+&lt;p&gt;Обычный пользователь:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Логин: &lt;code&gt;student&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Пароль: &lt;code&gt;student&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Пароль на суперпользователя &lt;code&gt;root&lt;/code&gt; должен быть &lt;code&gt;root&lt;/code&gt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;Выполнение-sudo-без-пароля&quot;&gt;Выполнение &lt;code&gt;sudo&lt;/code&gt; без пароля&lt;/h2&gt;
+
+&lt;p&gt;Любая команда типа &lt;code&gt;sudo echo &amp;#39;hello world&amp;#39;&lt;/code&gt; не должна запрашивать пароль для
+пользователя &lt;code&gt;student&lt;/code&gt;. Время ценно.&lt;/p&gt;
+
+&lt;p&gt;Чтобы реализовать это, наберите
+&lt;code&gt;
+sudo visudo
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;и добавьте предпоследней строчкой&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;student ALL=NOPASSWD: ALL
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Теперь можно запускать команды из под рута без пароля&lt;/p&gt;
+</description>
+        <pubDate>Fri, 31 Oct 2014 13:30:37 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/specifications/2014/10/31/virtual_machines_specifications.html</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/specifications/2014/10/31/virtual_machines_specifications.html</guid>
+        
+        
+        <category>specifications</category>
+        
+      </item>
+    
+      <item>
+        <title>Соединение Moxa EM-2260 и GNU/Linux</title>
+        <description>&lt;h2 id=&quot;Инструкция-для-xubuntu-(14.04)&quot;&gt;Инструкция для Xubuntu (14.04)&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Подключитесь к самому промышленному комьютеру&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Достаньте сетевой кабель из компьютера&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Отключите &lt;code&gt;NetworkManager&lt;/code&gt;. Для этого на панеле нажмите на значок с сетью и
+снимите галочку &lt;code&gt;EnableNetworking&lt;/code&gt;.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/xubuntu-disable-network-manager-f5a4464b4aaf432fa25a93d70592234f.png&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Это нужно для того, чтобы система не контролировала
+автоматически сеть, а контроллировали ее мы.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Выполните в терминале:&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;sudo ifconfig eth0  192.168.3.126
+&lt;span class=&quot;c&quot;&gt;# или&lt;/span&gt;
+sudo ifconfig eth0  192.168.4.126
+&lt;span class=&quot;c&quot;&gt;# В зависимости от того, к какому порту подключаетесь&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Так мы установим наш &lt;a href=&quot;http://ru.wikipedia.org/wiki/IP-%D0%B0%D0%B4%D1%80%D0%B5%D1%81&quot;&gt;IP&lt;/a&gt; для связи с моксой.&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Теперь проверим, пингуется ли мокса.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ping 192.168.3.127
+&lt;span class=&quot;c&quot;&gt;# или&lt;/span&gt;
+ping 192.168.4.127
+&lt;span class=&quot;c&quot;&gt;# В зависимости от того, к какому порту подключаетесь&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;ul&gt;
+&lt;li&gt;И как только нашли куда подключаться - подключаемся по SSH&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;ssh root@192.168.3.127
+&lt;span class=&quot;c&quot;&gt;# или&lt;/span&gt;
+ssh root@192.168.4.127
+&lt;span class=&quot;c&quot;&gt;# В зависимости от того, к какому порту подключаетесь&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Должны видеть нечто подобное:&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;    ####        ####    ######    ####### ######      ##
+     ###       ####   ###    ###    ####   ####      ###
+      ###      ###   ###      ###    ###    ##       ###
+      ###     ####   ##        ##    ###   #         ####
+      ####    # ##  ###        ###    ### ##        ## ##
+     ## ##    # ##  ###         ##     ####         #  ##
+     ## ###  ## ##  ##          ##     ####         #  ###
+     ##  ##  #  ##  ##          ##      ###        #######
+     ##  ##  #  ##  ###        ###     #####       #    ##
+     ##   ###   ##  ###        ###    ##  ###      #    ###
+     ##   ###   ##   ##        ##    ##    ###    ##     ##
+     ##   ###   ##    ##      ##     #     ###    #      ##
+   ######  #  ######   ########   ####### ###########  ######
+
+For further information check:
+http://www.moxa.com/
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Вуаля!&lt;/p&gt;
+</description>
+        <pubDate>Thu, 30 Oct 2014 12:10:57 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/moxa/2014/10/30/connect_to_moxa_em_2260.html</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/moxa/2014/10/30/connect_to_moxa_em_2260.html</guid>
+        
+        
+        <category>moxa</category>
+        
+      </item>
+    
+      <item>
+        <title>Настройка компьютера на GNU\Linux для работы с Moxa EM-2260</title>
+        <description>&lt;h2 id=&quot;Ставим-gnu\linux&quot;&gt;Ставим GNU\Linux&lt;/h2&gt;
+
+&lt;p&gt;Компилятор, который идет на диске заточен под Linux, поэтому нужно найти самый простой в установке и настройке дистрибутив.&lt;/p&gt;
+
+&lt;p&gt;Машины в лаборатории очень слабые, поэтому варианты такие:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Xubuntu (Ubuntu + XFCE)&lt;/li&gt;
+&lt;li&gt;Lununtu (Ubuntu + LXDE)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Качаем, записываем на диск, устанвливаем. Я выбрал &lt;a href=&quot;http://xubuntu.org/&quot;&gt;Xubuntu&lt;/a&gt; &lt;code&gt;i386&lt;/code&gt;, так она более-менее шустрая, но не требует какой-то дополнительной настройки. Мы позаимствуем из Lubuntu &lt;code&gt;pcmanfm&lt;/code&gt;. Основной плюс заключается в том, что при нажатии &lt;code&gt;F4&lt;/code&gt; открывается консоль в текущей папке. Для разработчика просто незаменимый плюс.&lt;/p&gt;
+
+&lt;h2 id=&quot;Настройка-xubuntu-gnu\linux&quot;&gt;Настройка Xubuntu GNU\Linux&lt;/h2&gt;
+
+&lt;p&gt;В первую очередь установите&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;менеджер пакетов &lt;code&gt;Synaptic&lt;/code&gt; (выполните в терминале &lt;code&gt;sudo apt-get install -y synaptic&lt;/code&gt;)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gdebi&lt;/code&gt; – для установки пакетов с жесткого диска&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;Sublime Text 3&lt;/code&gt;, или любой другой текстовый редактор.&lt;/li&gt;
+&lt;li&gt;Пакет &lt;code&gt;git-core&lt;/code&gt; для работы с &lt;code&gt;git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;vim&lt;/code&gt; для редактирования файлов&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;pcmanfm&lt;/code&gt; для просмотра файлов&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;synapse&lt;/code&gt; для быстрого запуска программ&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;Установка-synapse&quot;&gt;Установка &lt;code&gt;synapse&lt;/code&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Добавить репозиторий &lt;code&gt;sudo apt-add-repository ppa:synapse-core/testing&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo apt-get update&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;sudo apt-get install -y synapse&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;Установка-компилятора-для-moxa-em-2260&quot;&gt;Установка компилятора для MOXA EM-2260&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Вставить диск&lt;/li&gt;
+&lt;li&gt;Зайти на диск с помощью &lt;code&gt;pcmanfm&lt;/code&gt; и нажать &lt;code&gt;F4&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Перейти в папку &lt;code&gt;/tool-chain/linux&lt;/code&gt; и запустить &lt;code&gt;sudo bash arm-linux_2.2.sh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Устанавливаем компилятор&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Wed, 29 Oct 2014 16:21:51 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/moxa/2014/10/29/configure-pc-for-moxa-em-2260.html</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/moxa/2014/10/29/configure-pc-for-moxa-em-2260.html</guid>
+        
+        
+        <category>moxa</category>
+        
+      </item>
+    
+      <item>
+        <title>Всем привет!</title>
+        <description>&lt;p&gt;Мы начинаем постить разные интересности! Ого, да тут даже есть нормальная подсветка синтаксиса!&lt;/p&gt;
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;Tom&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints &amp;#39;Hi, Tom&amp;#39; to STDOUT.&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+        <pubDate>Tue, 30 Sep 2014 18:18:50 +0300</pubDate>
+        <link>https://raphy-bsu.github.io/news/2014/09/30/hi-everyone.html</link>
+        <guid isPermaLink="true">https://raphy-bsu.github.io/news/2014/09/30/hi-everyone.html</guid>
+        
+        
+        <category>news</category>
+        
+      </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Требования к системам, которые вы настраиваете</title>
+    <meta name="description" content="Кучка изобреталелей из восточной Европы
+">
+
+    <link rel="stylesheet" href="/css/hint.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="canonical" href="https://raphy-bsu.github.io/specifications/2014/10/31/virtual_machines_specifications.html">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+  <body>
+
+    <header class="site-header no-print">
+
+  <div class="wrapper">
+
+    <div class="logo-wrapper">
+      <span class="logo"><img src="/logo/raphy_main.png" alt=""></span>
+    </div>
+    <a class="site-title" href="/">Raphy BSU Blog</a>
+
+    <nav class="site-nav">
+      <a href="#" class="menu-icon">
+        <svg viewBox="0 0 18 15">
+          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+        </svg>
+      </a>
+
+      <div class="trigger">
+        
+          
+          <a class="page-link" href="/about/">О нас</a>
+          
+        
+          
+          <a class="page-link" href="/categories/">Карта сайта</a>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+          <a class="page-link" href="/moxa/">Moxa</a>
+          
+        
+          
+          <a class="page-link" href="/robots/">Роботы</a>
+          
+        
+        <a class="page-link" href="https://github.com/raphy-bsu"><i class="fa fa-github fa-2x"></i></a>
+        <a class="page-link" href="https://www.youtube.com/channel/UCf6JQ8OwekiV_vnzEsZd_cw"><i class="fa fa-youtube fa-2x"></i></a>
+      </div>
+    </nav>
+
+  </div>
+
+
+</header>
+
+
+    <div class="page-content">
+      <div class="wrapper">
+        <div class="post">
+
+  <header class="post-header">
+    
+      <span class="author-avatar no-print"><a href='https://github.com/OrelSokolov' class='hint--left' data-hint='Oleg Orlov'>
+          <img src='https://avatars.githubusercontent.com/OrelSokolov' alt='OrelSokolov'/>
+        </a></span>
+    
+    <h1 class="post-title">Требования к системам, которые вы настраиваете
+    </h1>
+    <p class="post-meta no-print">Oct 31, 2014 • OrelSokolov</p>
+  </header>
+
+  <article class="post-content">
+    <h1 id="Пароли-и-логины">Пароли и логины</h1>
+
+<p>Обычный пользователь:</p>
+
+<ul>
+<li>Логин: <code>student</code></li>
+<li>Пароль: <code>student</code></li>
+</ul>
+
+<p><strong>Пароль на суперпользователя <code>root</code> должен быть <code>root</code></strong></p>
+
+<h2 id="Выполнение-sudo-без-пароля">Выполнение <code>sudo</code> без пароля</h2>
+
+<p>Любая команда типа <code>sudo echo &#39;hello world&#39;</code> не должна запрашивать пароль для
+пользователя <code>student</code>. Время ценно.</p>
+
+<p>Чтобы реализовать это, наберите
+<code>
+sudo visudo
+</code></p>
+
+<p>и добавьте предпоследней строчкой</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">student ALL=NOPASSWD: ALL
+</code></pre></div>
+<p>Теперь можно запускать команды из под рута без пароля</p>
+
+  </article>
+
+</div>
+
+      </div>
+    </div>
+
+    <footer class="site-footer no-print">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col  footer-col-1">
+        <ul class="contact-list">
+          <li>Raphy BSU Blog</li>
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-2">
+        <ul class="social-media-list">
+          
+
+          
+        </ul>
+      </div>
+
+      <div class="footer-col  footer-col-3">
+        <p class="text">Кучка изобреталелей из восточной Европы
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
